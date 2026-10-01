@@ -32,4 +32,13 @@ public class FacteursPremiersTest {
         // THEN
         assertThat(resultat).containsExactly(2, 3);
     }
+
+    @Test
+    void generate_8_devrait_retourner_la_liste_avec_2_2_et_2() {
+        // WHEN
+        List<Integer> resultat = FacteursPremiers.generate(8);
+
+        // THEN
+        assertThat(resultat).containsExactly(2, 2, 2);
+    }
 }
