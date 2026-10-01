@@ -7,7 +7,7 @@ public class FacteursPremiers {
 
     public static List<Integer> generate(int nbre) {
         List<Integer> facteurs = new ArrayList<>();
-        if (nbre % 2 == 0) {
+        while (nbre % 2 == 0) {
             facteurs.add(2);
             nbre = nbre / 2;
         }
