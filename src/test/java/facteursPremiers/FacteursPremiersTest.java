@@ -23,4 +23,13 @@ public class FacteursPremiersTest {
         // THEN
         assertThat(resultat).containsExactly(2);
     }
+
+    @Test
+    void generate_6_devrait_retourner_la_liste_avec_2_et_3() {
+        // WHEN
+        List<Integer> resultat = FacteursPremiers.generate(6);
+
+        // THEN
+        assertThat(resultat).containsExactly(2, 3);
+    }
 }
