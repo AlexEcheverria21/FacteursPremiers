@@ -14,4 +14,13 @@ public class FacteursPremiersTest {
         // THEN
         assertThat(resultat).isEmpty();
     }
+
+    @Test
+    void generate_2_devrait_retourner_la_liste_avec_2() {
+        // WHEN
+        List<Integer> resultat = FacteursPremiers.generate(2);
+
+        // THEN
+        assertThat(resultat).containsExactly(2);
+    }
 }
