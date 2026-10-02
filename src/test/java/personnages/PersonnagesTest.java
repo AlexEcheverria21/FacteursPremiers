@@ -6,6 +6,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PersonnagesTest {
 
     @Test
+    void tourner_0_fois_devrait_orienter_vers_nord() {
+        Personnage personnage = new Personnage();
+        Orientation resultat = personnage.tourner(0);
+        assertThat(resultat).isEqualTo(Orientation.NORD);
+    }
+
+    @Test
     void tourner_1_fois_devrait_orienter_vers_est() {
         Personnage personnage = new Personnage();
         Orientation resultat = personnage.tourner(1);

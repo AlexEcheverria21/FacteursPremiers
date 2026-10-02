@@ -3,7 +3,7 @@ package personnages;
 public class Personnage {
 
     public Orientation tourner(int nbrDeFois) {
-        if (nbrDeFois == 4) {
+        if (nbrDeFois == 0 || nbrDeFois == 4) {
             return Orientation.NORD;
         }
         if (nbrDeFois == 3) {
