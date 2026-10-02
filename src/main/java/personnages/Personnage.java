@@ -3,16 +3,18 @@ package personnages;
 public class Personnage {
 
     public Orientation tourner(int nbrDeFois) {
-        if (nbrDeFois == 0 || nbrDeFois == 4) {
-            return Orientation.NORD;
+        int reste = nbrDeFois % 4;
+
+        if (reste == 1) {
+            return Orientation.EST;
         }
-        if (nbrDeFois == 3) {
-            return Orientation.OUEST;
-        }
-        if (nbrDeFois > 1) {
+        if (reste == 2) {
             return Orientation.SUD;
         }
-        return Orientation.EST;
+        if (reste == 3) {
+            return Orientation.OUEST;
+        }
+        return Orientation.NORD;
     }
 
 }
