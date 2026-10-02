@@ -12,4 +12,11 @@ public class PersonnagesTest {
         assertThat(resultat).isEqualTo(Orientation.EST);
     }
 
+    @Test
+    void tourner_2_fois_devrait_orienter_vers_sud() {
+        Personnage personnage = new Personnage();
+        Orientation resultat = personnage.tourner(2);
+        assertThat(resultat).isEqualTo(Orientation.SUD);
+    }
+
 }
