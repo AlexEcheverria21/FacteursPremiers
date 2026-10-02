@@ -19,4 +19,11 @@ public class PersonnagesTest {
         assertThat(resultat).isEqualTo(Orientation.SUD);
     }
 
+    @Test
+    void tourner_3_fois_devrait_orienter_vers_ouset() {
+        Personnage personnage = new Personnage();
+        Orientation resultat = personnage.tourner(3);
+        assertThat(resultat).isEqualTo(Orientation.OUEST);
+    }
+
 }
